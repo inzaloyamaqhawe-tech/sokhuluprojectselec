@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220" role="img" aria-label="Sokhulu brand mark">
+  <defs><linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0e2d49"/><stop offset="100%" stop-color="#1791d3"/></linearGradient></defs>
+  <rect x="6" y="6" width="208" height="208" rx="46" fill="url(#m)" stroke="#7bd4ff" stroke-opacity="0.6"/>
+  <path d="M58 148 L110 58 L162 148" stroke="#c8efff" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M78 148 H142" stroke="#7be0ff" stroke-width="10" stroke-linecap="round"/>
+</svg>

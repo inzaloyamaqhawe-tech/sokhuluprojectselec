@@ -35,34 +35,43 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-a.svg',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-b.svg',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-c.svg',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-a.svg',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-b.svg',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1400&q=80',
+    img: './project-grid-c.svg',
   },
 ];
+
+function onLogoError(event) {
+  const img = event.currentTarget;
+  if (img.dataset.fallbackApplied === '1') {
+    return;
+  }
+  img.dataset.fallbackApplied = '1';
+  img.src = './brand-mark.svg';
+}
 
 function onProjectImageError(event) {
   const img = event.currentTarget;
@@ -81,7 +90,7 @@ function SectionHome() {
           <p className="kicker">Electrical Project Specialists</p>
           <h2>Reliable Electrical Solutions for Homes, Businesses, and Industry</h2>
           <p className="lead">
-            Sokhulu & Partners Electrical Project Pty delivers safe, professional, and scalable electrical
+            Sokhulu & Parters Projects Pty delivers safe, professional, and scalable electrical
             services designed to support growth, uptime, and long-term infrastructure reliability.
           </p>
           <p className="slogan">Powering Communities. Lighting the Future.</p>
@@ -94,25 +103,18 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1400"
-            alt="Electrical engineer at work"
+            src="./engineering-hero.svg"
+            alt="Electrical systems engineering visual"
             loading="eager"
+            onError={onProjectImageError}
           />
         </aside>
       </section>
 
-      <section className="grid-3" style={{ marginTop: 12 }}>
+      <section className="grid-2" style={{ marginTop: 12 }}>
         <article className="panel card">
           <h3>Owner</h3>
           <p>Mthiyane Sandiso Akhona</p>
-        </article>
-        <article className="panel card">
-          <h3>Company</h3>
-          <p>Sokhulu & Partners Electrical Project Pty</p>
-        </article>
-        <article className="panel card">
-          <h3>Contact</h3>
-          <p>+27 63 787 7418</p>
         </article>
       </section>
     </section>
@@ -127,7 +129,7 @@ function SectionAbout() {
         <article>
           <h3>Business Overview</h3>
           <p>
-            Sokhulu & Partners Electrical Project Pty is focused on electrical installations, maintenance,
+            Sokhulu & Parters Projects Pty is focused on electrical installations, maintenance,
             and infrastructure support for residential, commercial, and community projects. The business is
             built to deliver dependable work while contributing to employment and community development.
           </p>
@@ -151,7 +153,7 @@ function SectionAbout() {
         <article>
           <h3>Conclusion</h3>
           <p>
-            Sokhulu & Partners Electrical Project Pty is committed to reliable electrical delivery and meaningful
+            Sokhulu & Parters Projects Pty is committed to reliable electrical delivery and meaningful
             contribution to economic growth within communities.
           </p>
         </article>
@@ -227,7 +229,7 @@ function SectionContact() {
     const safeType = projectType.trim() || 'Electrical project';
     const safeDetails = details.trim() || 'Please contact me with available service options.';
     const msg = [
-      `Hello Sokhulu & Partners,`,
+      `Hello Sokhulu & Parters Projects Pty,`,
       `My name is ${safeName}.`,
       `Project type: ${safeType}.`,
       `Details: ${safeDetails}`,
@@ -242,15 +244,12 @@ function SectionContact() {
         <article className="contact-lines">
           <div className="contact-line">
             <strong>Phone / WhatsApp</strong>
+            <p className="contact-owner">Mthiyane Sandiso Akhona</p>
             <p><a href="tel:+27637877418">+27 63 787 7418</a></p>
           </div>
           <div className="contact-line">
             <strong>Email</strong>
             <p><a href="mailto:sokhulupartnerselec@gmail.com">sokhulupartnerselec@gmail.com</a></p>
-          </div>
-          <div className="contact-line">
-            <strong>Company</strong>
-            <p>Sokhulu & Partners Electrical Project Pty</p>
           </div>
         </article>
 
@@ -305,9 +304,9 @@ function App() {
     <div className="shell">
       <header className="topbar">
         <div className="brand">
-          <img className="logo-image" src="./sokhulu&partnerslogo.jpeg" alt="Sokhulu & Partners logo" loading="eager" />
+          <img className="logo-image" src="./sokhulu&partnerslogo.jpeg" alt="Sokhulu & Parters Projects Pty logo" loading="eager" onError={onLogoError} />
           <div>
-            <h1>Sokhulu & Partners Electrical Project Pty</h1>
+            <h1>Sokhulu & Parters Projects Pty</h1>
             <p>Powering Communities. Lighting the Future.</p>
           </div>
         </div>
@@ -336,7 +335,7 @@ function App() {
       <SectionContact />
 
       <footer className="footer">
-        <p>Sokhulu & Partners Electrical Project Pty</p>
+        <p>Sokhulu & Parters Projects Pty</p>
         <p className="powered">
           Powered By: <a href="https://wa.me/27784106366?text=Hi%20Inzalo%20Yamaqhawe%20Technologies%2C%20I%20need%20your%20digital%20services." target="_blank" rel="noreferrer">Inzalo Yamaqhawe Technologies</a>
         </p>

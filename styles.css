@@ -1,16 +1,16 @@
 :root {
-  --bg-1: #06101f;
-  --bg-2: #0f2340;
-  --panel: rgba(8, 20, 38, 0.72);
-  --line: rgba(173, 220, 255, 0.22);
-  --ink: #ecf5ff;
-  --muted: #9bb4cb;
-  --electric: #27a7ff;
-  --electric-2: #00d0ff;
-  --soft: #e9f7ff;
+  --bg-1: #eef7ff;
+  --bg-2: #c7e5ff;
+  --panel: rgba(255, 255, 255, 0.82);
+  --line: rgba(33, 118, 181, 0.26);
+  --ink: #143650;
+  --muted: #456b88;
+  --electric: #0b9ff2;
+  --electric-2: #36d7ff;
+  --soft: #f4fbff;
   --ok: #59e5a6;
   --warn: #ffc671;
-  --shadow: 0 18px 40px rgba(2, 10, 20, 0.42);
+  --shadow: 0 18px 40px rgba(14, 75, 122, 0.18);
 }
 
 
@@ -29,24 +29,52 @@ body {
   font-family: Manrope, Segoe UI, sans-serif;
   color: var(--ink);
   background:
-    radial-gradient(circle at 85% -10%, rgba(39, 167, 255, 0.24), transparent 42%),
-    radial-gradient(circle at -10% 10%, rgba(0, 208, 255, 0.18), transparent 36%),
+    radial-gradient(circle at 88% -8%, rgba(29, 150, 230, 0.3), transparent 43%),
+    radial-gradient(circle at -8% 6%, rgba(0, 210, 255, 0.22), transparent 39%),
     repeating-linear-gradient(
       0deg,
-      rgba(120, 189, 237, 0.06) 0,
-      rgba(120, 189, 237, 0.06) 1px,
+      rgba(73, 143, 198, 0.08) 0,
+      rgba(73, 143, 198, 0.08) 1px,
       transparent 1px,
-      transparent 42px
+      transparent 38px
     ),
     repeating-linear-gradient(
       90deg,
-      rgba(120, 189, 237, 0.05) 0,
-      rgba(120, 189, 237, 0.05) 1px,
+      rgba(73, 143, 198, 0.07) 0,
+      rgba(73, 143, 198, 0.07) 1px,
       transparent 1px,
-      transparent 42px
+      transparent 38px
     ),
-    linear-gradient(155deg, var(--bg-1), var(--bg-2));
+    linear-gradient(150deg, var(--bg-1), var(--bg-2));
   background-attachment: fixed;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, transparent 0%, rgba(23, 131, 214, 0.1) 50%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(23, 131, 214, 0.08) 50%, transparent 100%);
+  background-size: 100% 190px, 220px 100%;
+  opacity: 0.5;
+  animation: blueprintDrift 16s linear infinite;
+  z-index: 0;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 34%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(14, 142, 222, 0), rgba(14, 142, 222, 0.78), rgba(14, 142, 222, 0));
+  filter: drop-shadow(0 0 8px rgba(14, 142, 222, 0.5));
+  pointer-events: none;
+  animation: lineSweep 6s ease-in-out infinite;
+  z-index: 0;
 }
 
 .shell {
@@ -64,7 +92,7 @@ body {
   width: 560px;
   height: 560px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(39, 167, 255, 0.34), rgba(39, 167, 255, 0));
+  background: radial-gradient(circle, rgba(59, 166, 236, 0.3), rgba(59, 166, 236, 0));
   pointer-events: none;
   filter: blur(4px);
   z-index: 0;
@@ -108,12 +136,12 @@ body {
 }
 
 .logo-image {
-  width: 62px;
-  height: 62px;
+  width: 74px;
+  height: 74px;
   border-radius: 16px;
   border: 1px solid var(--line);
   object-fit: cover;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.85);
   box-shadow: var(--shadow);
 }
 
@@ -156,7 +184,7 @@ body {
 }
 
 .btn-ghost {
-  color: #072036;
+  color: #11486f;
   background: linear-gradient(135deg, #e6f7ff, var(--soft));
 }
 
@@ -171,7 +199,7 @@ body {
   padding: 10px;
   border: 1px solid var(--line);
   border-radius: 14px;
-  background: rgba(6, 16, 31, 0.72);
+  background: rgba(232, 245, 255, 0.82);
   backdrop-filter: blur(10px);
 }
 
@@ -182,7 +210,7 @@ body {
   justify-content: center;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--ink);
   padding: 9px 14px;
   font-weight: 700;
@@ -198,7 +226,7 @@ body {
 .nav-btn.active {
   background: linear-gradient(135deg, var(--electric), var(--electric-2));
   border-color: transparent;
-  color: #03131f;
+  color: #ffffff;
   box-shadow: 0 8px 22px rgba(10, 159, 241, 0.38);
 }
 
@@ -208,6 +236,21 @@ body {
   background: var(--panel);
   backdrop-filter: blur(8px);
   box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 52%;
+  height: 100%;
+  background: linear-gradient(100deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0));
+  transform: skewX(-16deg);
+  opacity: 0.14;
+  pointer-events: none;
 }
 
 .hero {
@@ -259,7 +302,7 @@ body {
 
 .kicker {
   margin: 0 0 10px;
-  color: #7ed5ff;
+  color: #1285cf;
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.13em;
@@ -280,7 +323,7 @@ body {
 
 .slogan {
   margin-top: 14px;
-  color: #cdeeff;
+  color: #0e669f;
   font-weight: 800;
   font-size: 1.05rem;
 }
@@ -296,8 +339,8 @@ body {
   border: 1px solid var(--line);
   border-radius: 999px;
   padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.03);
-  color: #cbe8ff;
+  background: rgba(255, 255, 255, 0.78);
+  color: #1a5f90;
   font-weight: 600;
 }
 
@@ -336,7 +379,7 @@ body {
 
 .card h3 {
   margin: 0 0 8px;
-  color: #d7f0ff;
+  color: #1c5c88;
 }
 
 .card p,
@@ -365,7 +408,7 @@ body {
 
 .service-card h4 {
   margin: 0 0 6px;
-  color: #dff2ff;
+  color: #1e628f;
 }
 
 .badges {
@@ -424,6 +467,27 @@ body {
   }
 }
 
+@keyframes blueprintDrift {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(220px);
+  }
+}
+
+@keyframes lineSweep {
+  0%,
+  100% {
+    transform: translateY(-30px);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+}
+
 .project img {
   width: 100%;
   height: 190px;
@@ -437,7 +501,7 @@ body {
 
 .project-title {
   margin: 0;
-  color: #def2ff;
+  color: #1c5e89;
   font-weight: 800;
 }
 
@@ -465,9 +529,15 @@ body {
 }
 
 .contact-line a {
-  color: #9fddff;
+  color: #147ec3;
   text-decoration: none;
   font-weight: 700;
+}
+
+.contact-owner {
+  margin: 6px 0 2px;
+  font-size: 0.82rem;
+  color: var(--muted);
 }
 
 .form {
@@ -481,7 +551,7 @@ body {
 }
 
 .field label {
-  color: #cce8fd;
+  color: #24628f;
   font-weight: 700;
   font-size: 0.9rem;
 }
@@ -507,7 +577,7 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 10px;
-  color: #b7cee2;
+  color: #3b6483;
   flex-wrap: wrap;
   font-size: 0.92rem;
 }
@@ -518,7 +588,7 @@ body {
 }
 
 .powered a {
-  color: #9fddff;
+  color: #147ec3;
   text-decoration: none;
   font-weight: 700;
 }

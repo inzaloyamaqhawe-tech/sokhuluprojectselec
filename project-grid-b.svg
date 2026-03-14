@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Electrical project visual B">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#051628"/><stop offset="100%" stop-color="#0d3556"/></linearGradient></defs>
+  <rect width="1200" height="700" fill="url(#b)"/>
+  <g opacity="0.2" stroke="#86ceff" stroke-width="1"><path d="M100 0 V700"/><path d="M220 0 V700"/><path d="M340 0 V700"/><path d="M460 0 V700"/><path d="M580 0 V700"/><path d="M700 0 V700"/><path d="M820 0 V700"/><path d="M940 0 V700"/><path d="M1060 0 V700"/></g>
+  <g stroke="#40d3ff" stroke-width="5" fill="none"><path d="M120 150 H540 L620 240 H1080"/><path d="M90 540 H380 L500 430 H780 L920 560 H1140"/></g>
+  <g fill="#b5edff"><circle cx="620" cy="240" r="11"/><circle cx="500" cy="430" r="11"/><circle cx="920" cy="560" r="11"/></g>
+</svg>

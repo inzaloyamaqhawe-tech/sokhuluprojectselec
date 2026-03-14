@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-label="Engineering hero background">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06172a"/>
+      <stop offset="100%" stop-color="#0f3c61"/>
+    </linearGradient>
+    <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1eb5ff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#1eb5ff" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#1eb5ff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#88d4ff" stroke-width="1">
+    <path d="M0 120 H1600"/><path d="M0 240 H1600"/><path d="M0 360 H1600"/><path d="M0 480 H1600"/><path d="M0 600 H1600"/><path d="M0 720 H1600"/>
+    <path d="M120 0 V900"/><path d="M240 0 V900"/><path d="M360 0 V900"/><path d="M480 0 V900"/><path d="M600 0 V900"/><path d="M720 0 V900"/><path d="M840 0 V900"/><path d="M960 0 V900"/><path d="M1080 0 V900"/><path d="M1200 0 V900"/><path d="M1320 0 V900"/><path d="M1440 0 V900"/>
+  </g>
+  <g stroke-width="4" stroke-linecap="round">
+    <path d="M140 220 H760 L820 280 H1160" stroke="url(#trace)"/>
+    <path d="M220 460 H560 L640 540 H1380" stroke="url(#trace)"/>
+    <path d="M100 690 H420 L520 600 H980 L1120 740 H1500" stroke="url(#trace)"/>
+  </g>
+  <g fill="#4cc9ff">
+    <circle cx="760" cy="220" r="10"/><circle cx="820" cy="280" r="10"/><circle cx="560" cy="460" r="10"/><circle cx="640" cy="540" r="10"/><circle cx="980" cy="600" r="10"/><circle cx="1120" cy="740" r="10"/>
+  </g>
+  <text x="800" y="840" text-anchor="middle" fill="#c6ecff" font-size="44" font-family="Arial, sans-serif" font-weight="700">Electrical Systems Engineering</text>
+</svg>
