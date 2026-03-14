@@ -35,32 +35,32 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: './project-grid-a.svg',
+    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: './project-grid-b.svg',
+    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: './project-grid-c.svg',
+    img: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: './project-grid-a.svg',
+    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: './project-grid-b.svg',
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: './project-grid-c.svg',
+    img: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80',
   },
 ];
 
@@ -103,7 +103,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="./engineering-hero.svg"
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
@@ -111,12 +111,6 @@ function SectionHome() {
         </aside>
       </section>
 
-      <section className="grid-2" style={{ marginTop: 12 }}>
-        <article className="panel card">
-          <h3>Owner</h3>
-          <p>Mthiyane Sandiso Akhona</p>
-        </article>
-      </section>
     </section>
   );
 }
@@ -244,7 +238,7 @@ function SectionContact() {
         <article className="contact-lines">
           <div className="contact-line">
             <strong>Phone / WhatsApp</strong>
-            <p className="contact-owner">Mthiyane Sandiso Akhona</p>
+            <p className="contact-owner">Mthiyane Sandiso Akhona (Owner)</p>
             <p><a href="tel:+27637877418">+27 63 787 7418</a></p>
           </div>
           <div className="contact-line">
