@@ -1,11 +1,11 @@
-const { useMemo, useState } = React;
+const { useEffect, useState } = React;
 
 const PAGES = [
   { id: 'home', label: 'Home' },
-  { id: 'about', label: 'About Us' },
+  { id: 'about', label: 'About' },
   { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
-  { id: 'contact', label: 'Contact Us' },
+  { id: 'contact', label: 'Contact' },
 ];
 
 const SERVICES = [
@@ -35,38 +35,47 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://images.unsplash.com/photo-1581092162384-8987c1d64718?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1400&q=80',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1400&q=80',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://images.unsplash.com/photo-1621905252472-e8d3e3f8f79b?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1400&q=80',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://images.unsplash.com/photo-1596575180361-65a3f8f89d57?auto=format&fit=crop&w=1200&q=80',
+    img: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1400&q=80',
   },
 ];
 
+function onProjectImageError(event) {
+  const img = event.currentTarget;
+  if (img.dataset.fallbackApplied === '1') {
+    return;
+  }
+  img.dataset.fallbackApplied = '1';
+  img.src = './project-fallback.svg';
+}
+
 function SectionHome() {
   return (
-    <>
+    <section id="home" className="section-anchor">
       <section className="hero">
         <article className="hero-copy panel">
           <p className="kicker">Electrical Project Specialists</p>
@@ -85,7 +94,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://images.unsplash.com/photo-1544724569-5f546fd6f2b5?auto=format&fit=crop&w=1400&q=80"
+            src="https://images.pexels.com/photos/257736/pexels-photo-257736.jpeg?auto=compress&cs=tinysrgb&w=1400"
             alt="Electrical engineer at work"
             loading="eager"
           />
@@ -106,13 +115,13 @@ function SectionHome() {
           <p>+27 63 787 7418</p>
         </article>
       </section>
-    </>
+    </section>
   );
 }
 
 function SectionAbout() {
   return (
-    <section className="panel card">
+    <section id="about" className="panel card section-anchor">
       <h2 className="page-title">About Us</h2>
       <div className="grid-2">
         <article>
@@ -153,7 +162,7 @@ function SectionAbout() {
 
 function SectionServices() {
   return (
-    <section className="panel card">
+    <section id="services" className="panel card section-anchor">
       <h2 className="page-title">Services</h2>
       <div className="service-grid">
         {SERVICES.map((service) => (
@@ -188,7 +197,7 @@ function SectionServices() {
 
 function SectionProjects() {
   return (
-    <section className="panel card">
+    <section id="projects" className="panel card section-anchor">
       <h2 className="page-title">Projects</h2>
       <p style={{ color: 'var(--muted)', marginBottom: 12 }}>
         Project visuals below represent typical electrical project outcomes and environments.
@@ -196,7 +205,7 @@ function SectionProjects() {
       <div className="projects-grid">
         {PROJECTS.map((project) => (
           <article key={project.title} className="project">
-            <img src={project.img} alt={project.title} loading="lazy" />
+            <img src={project.img} alt={project.title} loading="lazy" onError={onProjectImageError} />
             <div className="project-body">
               <p className="project-title">{project.title}</p>
               <p className="project-copy">{project.copy}</p>
@@ -213,7 +222,7 @@ function SectionContact() {
   const [projectType, setProjectType] = useState('');
   const [details, setDetails] = useState('');
 
-  const whatsAppHref = useMemo(() => {
+  const buildWhatsAppHref = () => {
     const safeName = name.trim() || 'Client';
     const safeType = projectType.trim() || 'Electrical project';
     const safeDetails = details.trim() || 'Please contact me with available service options.';
@@ -224,10 +233,10 @@ function SectionContact() {
       `Details: ${safeDetails}`,
     ].join('\n');
     return `https://wa.me/27637877418?text=${encodeURIComponent(msg)}`;
-  }, [name, projectType, details]);
+  };
 
   return (
-    <section className="panel card">
+    <section id="contact" className="panel card section-anchor">
       <h2 className="page-title">Contact Us</h2>
       <div className="contact-wrap">
         <article className="contact-lines">
@@ -245,7 +254,7 @@ function SectionContact() {
           </div>
         </article>
 
-        <form className="form" onSubmit={(event) => { event.preventDefault(); window.open(whatsAppHref, '_blank'); }}>
+        <form className="form" onSubmit={(event) => { event.preventDefault(); window.open(buildWhatsAppHref(), '_blank'); }}>
           <div className="field">
             <label htmlFor="name">Your Name</label>
             <input id="name" value={name} onChange={(event) => setName(event.target.value)} placeholder="Full name" />
@@ -266,7 +275,31 @@ function SectionContact() {
 }
 
 function App() {
-  const [page, setPage] = useState('home');
+  const [activeSection, setActiveSection] = useState('home');
+
+  useEffect(() => {
+    const ids = PAGES.map((p) => p.id);
+
+    const updateActive = () => {
+      const offset = 140;
+      let current = 'home';
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (!el) {
+          return;
+        }
+        const top = el.getBoundingClientRect().top;
+        if (top - offset <= 0) {
+          current = id;
+        }
+      });
+      setActiveSection(current);
+    };
+
+    updateActive();
+    window.addEventListener('scroll', updateActive, { passive: true });
+    return () => window.removeEventListener('scroll', updateActive);
+  }, []);
 
   return (
     <div className="shell">
@@ -286,22 +319,21 @@ function App() {
 
       <nav className="nav" aria-label="Main navigation">
         {PAGES.map((item) => (
-          <button
+          <a
             key={item.id}
-            type="button"
-            className={`nav-btn ${page === item.id ? 'active' : ''}`}
-            onClick={() => setPage(item.id)}
+            className={`nav-btn ${activeSection === item.id ? 'active' : ''}`}
+            href={`#${item.id}`}
           >
             {item.label}
-          </button>
+          </a>
         ))}
       </nav>
 
-      {page === 'home' && <SectionHome />}
-      {page === 'about' && <SectionAbout />}
-      {page === 'services' && <SectionServices />}
-      {page === 'projects' && <SectionProjects />}
-      {page === 'contact' && <SectionContact />}
+      <SectionHome />
+      <SectionAbout />
+      <SectionServices />
+      <SectionProjects />
+      <SectionContact />
 
       <footer className="footer">
         <p>Sokhulu & Partners Electrical Project Pty</p>
