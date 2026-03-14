@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Community meters being connected">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d9edf8"/>
+      <stop offset="100%" stop-color="#b3d9f3"/>
+    </linearGradient>
+    <linearGradient id="pole" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5c768f"/>
+      <stop offset="100%" stop-color="#34495b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect x="0" y="760" width="1600" height="240" fill="#dfeaf2"/>
+
+  <rect x="120" y="220" width="90" height="540" rx="10" fill="url(#pole)"/>
+  <rect x="540" y="220" width="90" height="540" rx="10" fill="url(#pole)"/>
+  <rect x="960" y="220" width="90" height="540" rx="10" fill="url(#pole)"/>
+  <rect x="1380" y="220" width="90" height="540" rx="10" fill="url(#pole)"/>
+
+  <path d="M160 280 C360 180, 620 180, 860 280 C1080 360, 1310 360, 1425 280" fill="none" stroke="#244f72" stroke-width="10"/>
+  <path d="M160 335 C360 235, 620 235, 860 335 C1080 415, 1310 415, 1425 335" fill="none" stroke="#3b6f99" stroke-width="7"/>
+
+  <g transform="translate(250 380)">
+    <rect width="220" height="250" rx="16" fill="#f7fbff" stroke="#2b6a95" stroke-width="4"/>
+    <circle cx="110" cy="86" r="54" fill="#d4ecfb" stroke="#2b6a95" stroke-width="6"/>
+    <rect x="66" y="170" width="88" height="30" rx="8" fill="#7bc2ef"/>
+    <rect x="88" y="200" width="44" height="24" rx="6" fill="#2b6a95"/>
+    <path d="M110 258 L110 300" stroke="#2b6a95" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(690 380)">
+    <rect width="220" height="250" rx="16" fill="#f7fbff" stroke="#2b6a95" stroke-width="4"/>
+    <circle cx="110" cy="86" r="54" fill="#d4ecfb" stroke="#2b6a95" stroke-width="6"/>
+    <rect x="66" y="170" width="88" height="30" rx="8" fill="#7bc2ef"/>
+    <rect x="88" y="200" width="44" height="24" rx="6" fill="#2b6a95"/>
+    <path d="M110 258 L110 300" stroke="#2b6a95" stroke-width="8"/>
+  </g>
+
+  <g transform="translate(1130 380)">
+    <rect width="220" height="250" rx="16" fill="#f7fbff" stroke="#2b6a95" stroke-width="4"/>
+    <circle cx="110" cy="86" r="54" fill="#d4ecfb" stroke="#2b6a95" stroke-width="6"/>
+    <rect x="66" y="170" width="88" height="30" rx="8" fill="#7bc2ef"/>
+    <rect x="88" y="200" width="44" height="24" rx="6" fill="#2b6a95"/>
+    <path d="M110 258 L110 300" stroke="#2b6a95" stroke-width="8"/>
+  </g>
+
+  <path d="M470 510 C560 470, 620 470, 690 510" fill="none" stroke="#21a675" stroke-width="10"/>
+  <path d="M910 510 C1000 470, 1060 470, 1130 510" fill="none" stroke="#21a675" stroke-width="10"/>
+  <circle cx="530" cy="494" r="14" fill="#21a675"/>
+  <circle cx="970" cy="494" r="14" fill="#21a675"/>
+
+  <text x="70" y="940" fill="#235777" font-size="52" font-family="Arial, sans-serif" font-weight="700">Community Meter Connections - Local Grid Expansion</text>
+</svg>

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Traffic lights and street lights for commercial lighting">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14334d"/>
+      <stop offset="100%" stop-color="#245678"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#night)"/>
+  <rect x="0" y="700" width="1600" height="300" fill="#2f4c63"/>
+
+  <rect x="150" y="240" width="40" height="460" fill="#a8bbca"/>
+  <circle cx="170" cy="240" r="52" fill="#ffd469" opacity="0.85"/>
+  <rect x="560" y="200" width="40" height="500" fill="#a8bbca"/>
+  <circle cx="580" cy="200" r="56" fill="#ffd469" opacity="0.85"/>
+  <rect x="1310" y="230" width="40" height="470" fill="#a8bbca"/>
+  <circle cx="1330" cy="230" r="54" fill="#ffd469" opacity="0.85"/>
+
+  <rect x="860" y="300" width="24" height="400" fill="#9db0bf"/>
+  <rect x="884" y="300" width="180" height="18" fill="#9db0bf"/>
+  <rect x="1030" y="318" width="64" height="172" rx="10" fill="#21394b" stroke="#a5bfd2" stroke-width="4"/>
+  <circle cx="1062" cy="358" r="18" fill="#e44a4a"/>
+  <circle cx="1062" cy="404" r="18" fill="#f2bf3f"/>
+  <circle cx="1062" cy="450" r="18" fill="#3fd27a"/>
+
+  <path d="M0 770 H1600" stroke="#d8e5ef" stroke-width="4" stroke-dasharray="26 20"/>
+  <text x="70" y="940" fill="#d9ebf8" font-size="52" font-family="Arial, sans-serif" font-weight="700">Commercial Lighting Retrofit - Street and Traffic Light Systems</text>
+</svg>

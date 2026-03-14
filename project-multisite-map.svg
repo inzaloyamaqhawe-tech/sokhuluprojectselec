@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Map with three healthy sites and one offline site requiring intervention">
+  <defs>
+    <linearGradient id="mapbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d8ecfb"/>
+      <stop offset="100%" stop-color="#b8dcf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#mapbg)"/>
+
+  <rect x="120" y="120" width="1360" height="760" rx="26" fill="#f5fbff" stroke="#6fa2c8" stroke-width="6"/>
+
+  <path d="M220 280 L560 260 L760 360 L1080 300 L1360 430" fill="none" stroke="#8eb7d4" stroke-width="8"/>
+  <path d="M220 520 L430 470 L690 570 L930 510 L1230 620" fill="none" stroke="#8eb7d4" stroke-width="8"/>
+  <path d="M300 730 L520 640 L840 720 L1160 660" fill="none" stroke="#8eb7d4" stroke-width="8"/>
+
+  <path d="M340 310 C490 240, 640 260, 760 380" fill="none" stroke="#4e89b3" stroke-width="6" stroke-dasharray="10 10"/>
+  <path d="M760 380 C930 350, 1080 330, 1230 560" fill="none" stroke="#4e89b3" stroke-width="6" stroke-dasharray="10 10"/>
+
+  <g transform="translate(330 300)">
+    <circle r="26" fill="#23b26d"/>
+    <path d="M-11 0 L-2 11 L14 -9" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="11" fill="#1f6f4a" font-size="30" font-family="Arial, sans-serif" font-weight="700">Site A OK</text>
+  </g>
+
+  <g transform="translate(760 390)">
+    <circle r="26" fill="#23b26d"/>
+    <path d="M-11 0 L-2 11 L14 -9" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="11" fill="#1f6f4a" font-size="30" font-family="Arial, sans-serif" font-weight="700">Site B OK</text>
+  </g>
+
+  <g transform="translate(1230 560)">
+    <circle r="26" fill="#23b26d"/>
+    <path d="M-11 0 L-2 11 L14 -9" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="42" y="11" fill="#1f6f4a" font-size="30" font-family="Arial, sans-serif" font-weight="700">Site C OK</text>
+  </g>
+
+  <g transform="translate(980 330)">
+    <circle r="28" fill="#dd4c4c"/>
+    <path d="M0 -12 L0 4" stroke="#ffffff" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="0" cy="15" r="4" fill="#ffffff"/>
+    <text x="46" y="12" fill="#9b2f2f" font-size="32" font-family="Arial, sans-serif" font-weight="700">Site D Offline</text>
+    <text x="46" y="48" fill="#9b2f2f" font-size="26" font-family="Arial, sans-serif" font-weight="600">Intervention Required</text>
+  </g>
+
+  <text x="70" y="940" fill="#245b81" font-size="52" font-family="Arial, sans-serif" font-weight="700">Multi-Site Maintenance Map - 3 Online, 1 Needs Intervention</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Open mini-sub with broken wires and toolbox">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4e8f8"/>
+      <stop offset="100%" stop-color="#b9d7ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect x="0" y="770" width="1600" height="230" fill="#d8e3ec"/>
+
+  <rect x="220" y="200" width="860" height="520" rx="20" fill="#eef5fb" stroke="#4f708a" stroke-width="6"/>
+  <rect x="260" y="250" width="780" height="420" rx="14" fill="#f8fcff" stroke="#8ca9be" stroke-width="4"/>
+
+  <rect x="320" y="300" width="180" height="140" rx="10" fill="#d6e7f4" stroke="#5b7d98" stroke-width="4"/>
+  <rect x="540" y="300" width="180" height="140" rx="10" fill="#d6e7f4" stroke="#5b7d98" stroke-width="4"/>
+  <rect x="760" y="300" width="220" height="140" rx="10" fill="#d6e7f4" stroke="#5b7d98" stroke-width="4"/>
+
+  <path d="M410 460 C460 510, 500 500, 550 540" fill="none" stroke="#d83c3c" stroke-width="8" stroke-dasharray="14 10"/>
+  <path d="M620 460 C690 520, 760 510, 810 560" fill="none" stroke="#d83c3c" stroke-width="8" stroke-dasharray="14 10"/>
+  <path d="M890 460 C960 520, 990 540, 1030 590" fill="none" stroke="#d83c3c" stroke-width="8" stroke-dasharray="14 10"/>
+
+  <circle cx="550" cy="540" r="12" fill="#d83c3c"/>
+  <circle cx="810" cy="560" r="12" fill="#d83c3c"/>
+  <circle cx="1030" cy="590" r="12" fill="#d83c3c"/>
+
+  <rect x="1130" y="600" width="280" height="150" rx="14" fill="#f9c44f" stroke="#b07c16" stroke-width="5"/>
+  <rect x="1170" y="640" width="200" height="26" rx="8" fill="#8c6110"/>
+  <circle cx="1200" cy="730" r="18" fill="#34495b"/>
+  <circle cx="1340" cy="730" r="18" fill="#34495b"/>
+
+  <path d="M1190 595 C1220 560, 1320 560, 1350 595" fill="none" stroke="#8c6110" stroke-width="7"/>
+
+  <text x="70" y="940" fill="#224f71" font-size="52" font-family="Arial, sans-serif" font-weight="700">Fault Diagnostics - Open Mini-Substation and Repair Toolkit</text>
+</svg>

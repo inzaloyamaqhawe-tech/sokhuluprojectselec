@@ -3,7 +3,6 @@ const { useEffect, useState } = React;
 const PAGES = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -35,32 +34,32 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
+    img: './project-industrial-transformer.svg',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
+    img: './project-commercial-lights.svg',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1600&q=80',
+    img: './project-residential-smartpower.svg',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1600&q=80',
+    img: './project-community-meters.svg',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80',
+    img: './project-fault-minisub.svg',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80',
+    img: './project-multisite-map.svg',
   },
 ];
 
@@ -88,7 +87,7 @@ function SectionHome() {
       <section className="hero">
         <article className="hero-copy panel">
           <p className="kicker">Electrical Project Specialists</p>
-          <h2>Reliable Electrical Solutions for Homes, Businesses, and Industry</h2>
+          <h2>Reliable Electrical Solutions for Homes, Businesses, and Industries</h2>
           <p className="lead">
             Sokhulu & Parters Projects Pty delivers safe, professional, and scalable electrical
             services designed to support growth, uptime, and long-term infrastructure reliability.
@@ -131,59 +130,12 @@ function SectionAbout() {
         <article>
           <h3>Mission</h3>
           <p>
-            To provide high-quality electrical solutions that safely power homes, businesses, and communities
+            We provide high-quality electrical solutions that safely power homes, businesses, and communities
             while maintaining professional standards and customer satisfaction.
           </p>
-        </article>
-      </div>
-      <div className="grid-2" style={{ marginTop: 12 }}>
-        <article>
-          <h3>Vision</h3>
-          <p>
-            To become a trusted and recognized electrical services provider known for innovation, reliability,
-            and excellence in powering the future.
-          </p>
-        </article>
-        <article>
-          <h3>Conclusion</h3>
-          <p>
-            Sokhulu & Parters Projects Pty is committed to reliable electrical delivery and meaningful
-            contribution to economic growth within communities.
-          </p>
-        </article>
-      </div>
-    </section>
-  );
-}
-
-function SectionServices() {
-  return (
-    <section id="services" className="panel card section-anchor">
-      <h2 className="page-title">Services</h2>
-      <div className="service-grid">
-        {SERVICES.map((service) => (
-          <article key={service} className="service-card">
-            <h4>{service}</h4>
-            <p>Planned, executed, and quality-checked with safety compliance in mind.</p>
-          </article>
-        ))}
-      </div>
-
-      <div className="grid-2" style={{ marginTop: 14 }}>
-        <article className="panel card">
-          <h3>Target Market</h3>
-          <ul className="list">
-            {TARGET_MARKET.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </article>
-        <article className="panel card">
-          <h3>Electrical Equipment</h3>
-          <ul className="list">
-            {EQUIPMENT.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-          <div className="badges">
-            <span className="badge ok">Safety Focused</span>
-            <span className="badge warn">Quality Assurance</span>
+          <div className="mission-lines">
+            <p><strong>Vision:</strong> To be a trusted and recognized electrical projects provider known for innovation, reliability, and technical excellence.</p>
+            <p><strong>Conclusion:</strong> Sokhulu & Parters Projects Pty is committed to dependable delivery that supports local development and long-term growth.</p>
           </div>
         </article>
       </div>
@@ -324,7 +276,6 @@ function App() {
 
       <SectionHome />
       <SectionAbout />
-      <SectionServices />
       <SectionProjects />
       <SectionContact />
 
