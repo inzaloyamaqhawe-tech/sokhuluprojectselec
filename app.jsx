@@ -34,36 +34,40 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://unsplash.com/photos/9C1z4PrRUig/download?force=true&w=1600',
+    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
+    fallback: './project-industrial-transformer.svg',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://unsplash.com/photos/WCOQqnHEmqw/download?force=true&w=1600',
+    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
+    fallback: './project-commercial-lights.svg',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://unsplash.com/photos/HgidBi56iro/download?force=true&w=1600',
+    img: 'https://source.unsplash.com/HgidBi56iro/1600x1000',
+    fallback: './project-residential-smartpower.svg',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://unsplash.com/photos/waKOwix3cZM/download?force=true&w=1600',
+    img: 'https://source.unsplash.com/waKOwix3cZM/1600x1000',
+    fallback: './project-community-meters.svg',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://unsplash.com/photos/5Nqj8VKfDko/download?force=true&w=1600',
+    img: 'https://source.unsplash.com/5Nqj8VKfDko/1600x1000',
+    fallback: './project-fault-minisub.svg',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://unsplash.com/photos/7IcARfSxo2Y/download?force=true&w=1600',
+    img: 'https://source.unsplash.com/7IcARfSxo2Y/1600x1000',
+    fallback: './project-multisite-map.svg',
   },
 ];
-
-const REAL_IMAGE_FALLBACK = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80';
 
 function onLogoError(event) {
   const img = event.currentTarget;
@@ -80,7 +84,7 @@ function onProjectImageError(event) {
     return;
   }
   img.dataset.fallbackApplied = '1';
-  img.src = REAL_IMAGE_FALLBACK;
+  img.src = img.dataset.fallback || './project-fallback.svg';
 }
 
 function SectionHome() {
@@ -104,10 +108,11 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://unsplash.com/photos/CjO2q7BHeiM/download?force=true&w=1800"
+            src="https://source.unsplash.com/CjO2q7BHeiM/1800x1100"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
+            data-fallback="./project-industrial-transformer.svg"
           />
         </aside>
       </section>
@@ -154,7 +159,13 @@ function SectionProjects() {
       <div className="projects-grid">
         {PROJECTS.map((project) => (
           <article key={project.title} className="project">
-            <img src={project.img} alt={project.title} loading="lazy" onError={onProjectImageError} />
+            <img
+              src={project.img}
+              alt={project.title}
+              loading="lazy"
+              onError={onProjectImageError}
+              data-fallback={project.fallback}
+            />
             <div className="project-body">
               <p className="project-title">{project.title}</p>
               <p className="project-copy">{project.copy}</p>
