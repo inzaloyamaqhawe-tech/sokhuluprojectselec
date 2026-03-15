@@ -34,34 +34,36 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://source.unsplash.com/1600x1000/?electrical,transformer,substation',
+    img: 'https://unsplash.com/photos/9C1z4PrRUig/download?force=true&w=1600',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://source.unsplash.com/1600x1000/?traffic-light,street-light,city-night',
+    img: 'https://unsplash.com/photos/WCOQqnHEmqw/download?force=true&w=1600',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://source.unsplash.com/1600x1000/?smart-home,phone,light-switch',
+    img: 'https://unsplash.com/photos/HgidBi56iro/download?force=true&w=1600',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://source.unsplash.com/1600x1000/?electricity,meter,installation',
+    img: 'https://unsplash.com/photos/waKOwix3cZM/download?force=true&w=1600',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://source.unsplash.com/1600x1000/?electrical,panel,maintenance,toolbox',
+    img: 'https://unsplash.com/photos/5Nqj8VKfDko/download?force=true&w=1600',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://source.unsplash.com/1600x1000/?network,operations,map,monitoring',
+    img: 'https://unsplash.com/photos/7IcARfSxo2Y/download?force=true&w=1600',
   },
 ];
+
+const REAL_IMAGE_FALLBACK = 'https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80';
 
 function onLogoError(event) {
   const img = event.currentTarget;
@@ -78,7 +80,7 @@ function onProjectImageError(event) {
     return;
   }
   img.dataset.fallbackApplied = '1';
-  img.src = './project-fallback.svg';
+  img.src = REAL_IMAGE_FALLBACK;
 }
 
 function SectionHome() {
@@ -102,7 +104,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://source.unsplash.com/1800x1100/?circuit-breaker,electrical-panel"
+            src="https://unsplash.com/photos/CjO2q7BHeiM/download?force=true&w=1800"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
