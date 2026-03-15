@@ -95,7 +95,7 @@ function SectionHome() {
           <p className="kicker">Electrical Project Specialists</p>
           <h2>Reliable Electrical Solutions for Homes, Businesses, and Industries</h2>
           <p className="lead">
-            Sokhulu & Parters Projects Pty delivers safe, professional, and scalable electrical
+            Sokhulu & Partners Electrical Projects Pty delivers safe, professional, and scalable electrical
             services designed to support growth, uptime, and long-term infrastructure reliability.
           </p>
           <p className="slogan">Powering Communities. Lighting the Future.</p>
@@ -129,7 +129,7 @@ function SectionAbout() {
         <article>
           <h3>Business Overview</h3>
           <p>
-            Sokhulu & Parters Projects Pty is focused on electrical installations, maintenance,
+            Sokhulu & Partners Electrical Projects Pty is focused on electrical installations, maintenance,
             and infrastructure support for residential, commercial, and community projects. The business is
             built to deliver dependable work while contributing to employment and community development.
           </p>
@@ -139,7 +139,7 @@ function SectionAbout() {
           <p>
             To deliver high-quality electrical solutions that safely power homes, businesses, and communities
             while upholding the highest professional standards and customer satisfaction. Sokhulu & Partners
-            Projects Pty is committed to innovation, reliability, and technical excellence, providing dependable
+            Electrical Projects Pty is committed to innovation, reliability, and technical excellence, providing dependable
             electrical project services that support local development, build long-term trust, and contribute
             to sustainable growth.
           </p>
@@ -187,7 +187,7 @@ function SectionContact() {
     const safeType = projectType.trim() || 'Electrical project';
     const safeDetails = details.trim() || 'Please contact me with available service options.';
     const msg = [
-      `Hello Sokhulu & Parters Projects Pty,`,
+      `Hello Sokhulu & Partners Electrical Projects Pty,`,
       `My name is ${safeName}.`,
       `Project type: ${safeType}.`,
       `Details: ${safeDetails}`,
@@ -262,9 +262,9 @@ function App() {
     <div className="shell">
       <header className="topbar">
         <div className="brand">
-          <img className="logo-image" src="./sokhulu&partnerslogo.jpeg" alt="Sokhulu & Parters Projects Pty logo" loading="eager" onError={onLogoError} />
+          <img className="logo-image" src="./sokhulu&partnerslogo.jpeg" alt="Sokhulu & Partners Electrical Projects Pty logo" loading="eager" onError={onLogoError} />
           <div>
-            <h1>Sokhulu & Parters Projects Pty</h1>
+            <h1>Sokhulu & Partners Electrical Projects Pty</h1>
             <p>Powering Communities. Lighting the Future.</p>
           </div>
         </div>
@@ -292,7 +292,7 @@ function App() {
       <SectionContact />
 
       <footer className="footer">
-        <p>Sokhulu & Parters Projects Pty</p>
+        <p>Sokhulu & Partners Electrical Projects Pty</p>
         <p className="powered">
           Powered By: <a href="https://wa.me/27784106366?text=Hi%20Inzalo%20Yamaqhawe%20Technologies%2C%20I%20need%20your%20digital%20services." target="_blank" rel="noreferrer">Inzalo Yamaqhawe Technologies</a>
         </p>
