@@ -34,37 +34,37 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://plus.unsplash.com/premium_photo-1679672988622-df7b3ce938aa?q=80&w=1600&auto=format&fit=crop',
+    img: './industrialdistributionupgrade.jpg',
     fallback: './project-industrial-transformer.svg',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://plus.unsplash.com/premium_photo-1736113359322-38cde251c133?q=80&w=1600&auto=format&fit=crop',
+    img: './commerciallightningretrofit.jpg',
     fallback: './project-commercial-lights.svg',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://plus.unsplash.com/premium_photo-1661777354700-ce2317b3e720?q=80&w=1600&auto=format&fit=crop',
+    img: './residentialsmartpower.jpg',
     fallback: './project-residential-smartpower.svg',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://plus.unsplash.com/premium_photo-1683141457896-367f0ad2ddcd?q=80&w=1600&auto=format&fit=crop',
+    img: './communityinfrastructuresupport.jpg',
     fallback: './project-community-meters.svg',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://plus.unsplash.com/premium_photo-1678766819262-cdc490bfd0d1?q=80&w=1600&auto=format&fit=crop',
+    img: './faultdiagnoticsprogram.jpg',
     fallback: './project-fault-minisub.svg',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://plus.unsplash.com/premium_photo-1683288662019-c92caea8276d?q=80&w=1600&auto=format&fit=crop',
+    img: './multisitemaintenance.jpg',
     fallback: './project-multisite-map.svg',
   },
 ];
@@ -108,7 +108,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://plus.unsplash.com/premium_photo-1678766819199-5660bab7085b?q=80&w=1800&auto=format&fit=crop"
+            src="./homeheropic.jpg"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
@@ -192,7 +192,7 @@ function SectionContact() {
       `Project type: ${safeType}.`,
       `Details: ${safeDetails}`,
     ].join('\n');
-    return `https://wa.me/27637877418?text=${encodeURIComponent(msg)}`;
+    return `https://wa.me/27637877419?text=${encodeURIComponent(msg)}`;
   };
 
   return (
@@ -203,7 +203,7 @@ function SectionContact() {
           <div className="contact-line">
             <strong>Phone / WhatsApp</strong>
             <p className="contact-owner">Mthiyane Sandiso Akhona (Owner)</p>
-            <p><a href="tel:+27637877418">+27 63 787 7418</a></p>
+            <p><a href="tel:+27637877419">+27 63 787 7419</a></p>
           </div>
           <div className="contact-line">
             <strong>Email</strong>
@@ -270,7 +270,7 @@ function App() {
         </div>
         <div className="quick-actions">
           <a className="btn btn-ghost" href="mailto:sokhulupartnerselec@gmail.com">Email</a>
-          <a className="btn btn-primary" href="https://wa.me/27637877418" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a className="btn btn-primary" href="https://wa.me/27637877419" target="_blank" rel="noreferrer">WhatsApp</a>
         </div>
       </header>
 
