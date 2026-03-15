@@ -34,37 +34,37 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1600&q=80',
+    img: 'https://plus.unsplash.com/premium_photo-1679672988622-df7b3ce938aa?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-industrial-transformer.svg',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80',
+    img: 'https://plus.unsplash.com/premium_photo-1736113359322-38cde251c133?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-commercial-lights.svg',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: 'https://source.unsplash.com/HgidBi56iro/1600x1000',
+    img: 'https://plus.unsplash.com/premium_photo-1661777354700-ce2317b3e720?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-residential-smartpower.svg',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: 'https://source.unsplash.com/waKOwix3cZM/1600x1000',
+    img: 'https://plus.unsplash.com/premium_photo-1683141457896-367f0ad2ddcd?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-community-meters.svg',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: 'https://source.unsplash.com/5Nqj8VKfDko/1600x1000',
+    img: 'https://plus.unsplash.com/premium_photo-1678766819262-cdc490bfd0d1?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-fault-minisub.svg',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: 'https://source.unsplash.com/7IcARfSxo2Y/1600x1000',
+    img: 'https://plus.unsplash.com/premium_photo-1683288662019-c92caea8276d?q=80&w=1600&auto=format&fit=crop',
     fallback: './project-multisite-map.svg',
   },
 ];
@@ -108,7 +108,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://source.unsplash.com/CjO2q7BHeiM/1800x1100"
+            src="https://plus.unsplash.com/premium_photo-1678766819199-5660bab7085b?q=80&w=1800&auto=format&fit=crop"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
