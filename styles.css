@@ -241,7 +241,7 @@ body::after {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 14px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .hero-copy {
@@ -331,7 +331,7 @@ body::after {
 
 .hero-media {
   overflow: hidden;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: auto;
 }
 
 .hero-media img {
@@ -339,7 +339,7 @@ body::after {
   height: 100%;
   min-height: 0;
   max-height: none;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
   display: block;
 }

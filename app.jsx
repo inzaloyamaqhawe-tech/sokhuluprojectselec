@@ -108,7 +108,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="./homeheropic.jpg"
+            src="./homephoto.jpg"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
