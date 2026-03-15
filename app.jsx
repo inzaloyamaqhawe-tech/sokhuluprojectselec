@@ -34,32 +34,32 @@ const PROJECTS = [
   {
     title: 'Industrial Distribution Upgrade',
     copy: 'Panel optimization, protected circuits, and load balancing for factory environments.',
-    img: './project-industrial-transformer.svg',
+    img: 'https://source.unsplash.com/1600x1000/?electrical,transformer,substation',
   },
   {
     title: 'Commercial Lighting Retrofit',
     copy: 'Energy-efficient lighting installation for office and retail properties.',
-    img: './project-commercial-lights.svg',
+    img: 'https://source.unsplash.com/1600x1000/?traffic-light,street-light,city-night',
   },
   {
     title: 'Residential Smart Power Setup',
     copy: 'Modern home rewiring, safety upgrades, and backup power routing.',
-    img: './project-residential-smartpower.svg',
+    img: 'https://source.unsplash.com/1600x1000/?smart-home,phone,light-switch',
   },
   {
     title: 'Community Infrastructure Support',
     copy: 'Street and facility power support for local development initiatives.',
-    img: './project-community-meters.svg',
+    img: 'https://source.unsplash.com/1600x1000/?electricity,meter,installation',
   },
   {
     title: 'Fault Diagnostics Program',
     copy: 'Rapid fault finding and corrective planning for recurring downtime.',
-    img: './project-fault-minisub.svg',
+    img: 'https://source.unsplash.com/1600x1000/?electrical,panel,maintenance,toolbox',
   },
   {
     title: 'Multi-Site Maintenance Contract',
     copy: 'Scheduled preventive maintenance for businesses operating across locations.',
-    img: './project-multisite-map.svg',
+    img: 'https://source.unsplash.com/1600x1000/?network,operations,map,monitoring',
   },
 ];
 
@@ -102,7 +102,7 @@ function SectionHome() {
         </article>
         <aside className="hero-media panel">
           <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1800&q=80"
+            src="https://source.unsplash.com/1800x1100/?circuit-breaker,electrical-panel"
             alt="Electrical systems engineering visual"
             loading="eager"
             onError={onProjectImageError}
