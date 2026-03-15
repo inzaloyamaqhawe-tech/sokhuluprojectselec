@@ -130,13 +130,12 @@ function SectionAbout() {
         <article>
           <h3>Mission</h3>
           <p>
-            We provide high-quality electrical solutions that safely power homes, businesses, and communities
-            while maintaining professional standards and customer satisfaction.
+            To deliver high-quality electrical solutions that safely power homes, businesses, and communities
+            while upholding the highest professional standards and customer satisfaction. Sokhulu & Partners
+            Projects Pty is committed to innovation, reliability, and technical excellence, providing dependable
+            electrical project services that support local development, build long-term trust, and contribute
+            to sustainable growth.
           </p>
-          <div className="mission-lines">
-            <p><strong>Vision:</strong> To be a trusted and recognized electrical projects provider known for innovation, reliability, and technical excellence.</p>
-            <p><strong>Conclusion:</strong> Sokhulu & Parters Projects Pty is committed to dependable delivery that supports local development and long-term growth.</p>
-          </div>
         </article>
       </div>
     </section>
