@@ -331,14 +331,16 @@ body::after {
 
 .hero-media {
   overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .hero-media img {
   width: 100%;
-  height: auto;
+  height: 100%;
   min-height: 0;
   max-height: none;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   display: block;
 }
 
@@ -613,10 +615,6 @@ body::after {
   .projects-grid,
   .contact-wrap {
     grid-template-columns: 1fr;
-  }
-
-  .hero-media img {
-    min-height: 280px;
   }
 }
 
