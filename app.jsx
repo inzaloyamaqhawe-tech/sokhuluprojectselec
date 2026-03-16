@@ -129,19 +129,7 @@ function SectionAbout() {
         <article>
           <h3>Business Overview</h3>
           <p>
-            Sokhulu & Partners Electrical Projects Pty is focused on electrical installations, maintenance,
-            and infrastructure support for residential, commercial, and community projects. The business is
-            built to deliver dependable work while contributing to employment and community development.
-          </p>
-        </article>
-        <article>
-          <h3>Mission</h3>
-          <p>
-            To deliver high-quality electrical solutions that safely power homes, businesses, and communities
-            while upholding the highest professional standards and customer satisfaction. Sokhulu & Partners
-            Electrical Projects Pty is committed to innovation, reliability, and technical excellence, providing dependable
-            electrical project services that support local development, build long-term trust, and contribute
-            to sustainable growth.
+            Sokhulu & Partners Electrical Projects Pty is a black woman-owned company committed to delivering professional electrical installations, maintenance, and infrastructure support for residential, commercial, and community projects. Founded on principles of reliability, technical excellence, and empowerment, the company strives to provide high-quality electrical solutions while promoting inclusive economic participation. Through its work, Sokhulu & Partners Electrical Projects aims to contribute to skills development, local employment, and the sustainable growth of the communities it serves.
           </p>
         </article>
       </div>
